@@ -6,20 +6,97 @@
 			 xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-   <Grid>
-		<avalonEdit:TextEditor x:Name="txtEditor" FontFamily="Consolas" SyntaxHighlighting="C#" 
-													 FontSize="10pt" ShowLineNumbers="True" 
-													 TextChanged="txtEditor_TextChanged" DragEnter="txtEditor_DragEnter"
-													 Drop="txtEditor_Drop">
+	<Grid x:Name="grdMain">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<avalonEdit:TextEditor x:Name="txtEditor"  Grid.Row="0" Grid.Column="0"
+						FontFamily="Consolas" SyntaxHighlighting="C#" Margin="0,0,10,0"
+						FontSize="14pt" ShowLineNumbers="True" GotFocus="txtEditor_GotFocus"
+						TextChanged="txtEditor_TextChanged" DragEnter="txtEditor_DragEnter"
+						Drop="txtEditor_Drop">
 			<avalonEdit:TextEditor.ContextMenu>
 				<ContextMenu>
-					<MenuItem Header="Copiar" />
-					<MenuItem Header="Cortar" />
-					<MenuItem Header="Pegar" />
-					<MenuItem Header="Pegar como HTML" />
-					<MenuItem Header="Borrar" />
+					<MenuItem Header="Copiar" Command="ApplicationCommands.Copy" CommandTarget="{Binding ElementName=txtEditor}">
+						<MenuItem.Icon>
+							<Image Width="16" Height="16" Source="/CodeEditor;component/Resources/Images/Copy.png" />
+						</MenuItem.Icon>
+					</MenuItem>
+					<MenuItem Header="Cortar" Command="ApplicationCommands.Cut" CommandTarget="{Binding ElementName=txtEditor}">
+						<MenuItem.Icon>
+							<Image Width="16" Height="16" Source="/CodeEditor;component/Resources/Images/Cut.png" />
+						</MenuItem.Icon>
+					</MenuItem>
+					<MenuItem Header="Pegar" Command="ApplicationCommands.Paste" CommandTarget="{Binding ElementName=txtEditor}">
+						<MenuItem.Icon>
+							<Image Width="16" Height="16" Source="/CodeEditor;component/Resources/Images/Paste.png" />
+						</MenuItem.Icon>
+					</MenuItem>
+					<Separator/>
+					<MenuItem Header="Borrar" Command="ApplicationCommands.Delete" CommandTarget="{Binding ElementName=txtEditor}">
+						<MenuItem.Icon>
+							<Image Width="16" Height="16" Source="/CodeEditor;component/Resources/Images/Delete.png" />
+						</MenuItem.Icon>
+					</MenuItem>
+					<Separator/>
+					<MenuItem x:Name="mnuSplitVertical" Header="Dividir pantalla verticalmente" Click="mnuSplitVertical_Click">
+						<MenuItem.Icon>
+							<Image Width="16" Height="16" Source="/CodeEditor;component/Resources/Images/SplitVertical.png" />
+						</MenuItem.Icon>
+					</MenuItem>
+					<MenuItem x:Name="mnuSplitHorizontal" Header="Dividir pantalla horizontalmente" Click="mnuSplitHorizontal_Click">
+						<MenuItem.Icon>
+							<Image Width="16" Height="16" Source="/CodeEditor;component/Resources/Images/SplitHorizontal.png" />
+						</MenuItem.Icon>
+					</MenuItem>
 				</ContextMenu>
 			</avalonEdit:TextEditor.ContextMenu>
-			</avalonEdit:TextEditor>
+		</avalonEdit:TextEditor>
+		<GridSplitter x:Name="splitterHorizontal" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"
+				Margin="2, 5, 2, 5" Background="AliceBlue" Height="8" MouseDoubleClick="splitter_MouseDoubleClick"/>
+		<GridSplitter x:Name="splitterVertical" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" VerticalAlignment="Stretch" Panel.ZIndex="1"
+				Margin="0,0,0,0" Background="AliceBlue" Width="8" MouseDoubleClick="splitter_MouseDoubleClick" />
+		<avalonEdit:TextEditor x:Name="txtEditorSecondary" Grid.Row="1" Grid.Column="0"
+						FontFamily="Consolas" SyntaxHighlighting="C#" 
+						FontSize="14pt" ShowLineNumbers="True" 
+						TextChanged="txtEditor_TextChanged" DragEnter="txtEditor_DragEnter" GotFocus="txtEditorSecondary_GotFocus"
+						Drop="txtEditor_Drop">
+			<avalonEdit:TextEditor.ContextMenu>
+				<ContextMenu>
+					<MenuItem Header="Copiar" Command="ApplicationCommands.Copy" CommandTarget="{Binding ElementName=txtEditorSecondary}">
+						<MenuItem.Icon>
+							<Image Width="16" Height="16" Source="/CodeEditor;component/Resources/Images/Copy.png" />
+						</MenuItem.Icon>
+					</MenuItem>
+					<MenuItem Header="Cortar" Command="ApplicationCommands.Cut" CommandTarget="{Binding ElementName=txtEditorSecondary}">
+						<MenuItem.Icon>
+							<Image Width="16" Height="16" Source="/CodeEditor;component/Resources/Images/Cut.png" />
+						</MenuItem.Icon>
+					</MenuItem>
+					<MenuItem Header="Pegar" Command="ApplicationCommands.Paste" CommandTarget="{Binding ElementName=txtEditorSecondary}">
+						<MenuItem.Icon>
+							<Image Width="16" Height="16" Source="/CodeEditor;component/Resources/Images/Paste.png" />
+						</MenuItem.Icon>
+					</MenuItem>
+					<Separator/>
+					<MenuItem Header="Borrar" Command="ApplicationCommands.Delete" CommandTarget="{Binding ElementName=txtEditorSecondary}">
+						<MenuItem.Icon>
+							<Image Width="16" Height="16" Source="/CodeEditor;component/Resources/Images/Delete.png" />
+						</MenuItem.Icon>
+					</MenuItem>
+					<Separator/>
+					<MenuItem x:Name="mnuUnsplit" Header="Quitar división pantalla" Click="mnuUnsplit_Click">
+						<MenuItem.Icon>
+							<Image Width="16" Height="16" Source="/CodeEditor;component/Resources/Images/NoSplit.png" />
+						</MenuItem.Icon>
+					</MenuItem>
+				</ContextMenu>
+			</avalonEdit:TextEditor.ContextMenu>
+		</avalonEdit:TextEditor>
 	</Grid>
 </UserControl>
