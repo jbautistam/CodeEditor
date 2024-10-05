@@ -12,7 +12,6 @@ namespace Bau.Controls.CodeEditor;
 /// </summary>
 public partial class ctlEditor : UserControl
 {
-
 	// Eventos públicos
 	public event EventHandler? TextChanged;
 	public event EventHandler? PositionChanged;
