@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>Bau.Controls.CodeEditor</RootNamespace>
+    <Authors>Jose Antonio Bautista</Authors>
+    <Company>Jose Antonio Bautista</Company>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Resources\Images\ArrowDown.png" />
+    <None Remove="Resources\Images\ArrowLeft.png" />
+    <None Remove="Resources\Images\ArrowRight.png" />
+    <None Remove="Resources\Images\ArrowUp.png" />
+    <None Remove="Resources\Images\CaseSensitive.png" />
+    <None Remove="Resources\Images\Close.png" />
+    <None Remove="Resources\Images\Copy.png" />
+    <None Remove="Resources\Images\Cut.png" />
+    <None Remove="Resources\Images\Delete.png" />
+    <None Remove="Resources\Images\NoSplit.png" />
+    <None Remove="Resources\Images\Paste.png" />
+    <None Remove="Resources\Images\ReplaceAll.png" />
+    <None Remove="Resources\Images\ReplaceNext.png" />
+    <None Remove="Resources\Images\SplitHorizontal.png" />
+    <None Remove="Resources\Images\SplitVertical.png" />
+    <None Remove="Resources\Images\WholeWord.png" />
+    <None Remove="Resources\Images\Wildcards.png" />
+    <None Remove="Resources\PythonHighLight.xml" />
+    <None Remove="Resources\SqlHighLight.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AvalonEdit" Version="6.3.0.90" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\ArrowDown.png" />
+    <Resource Include="Resources\Images\ArrowLeft.png" />
+    <Resource Include="Resources\Images\ArrowRight.png" />
+    <Resource Include="Resources\Images\ArrowUp.png" />
+    <Resource Include="Resources\Images\CaseSensitive.png" />
+    <Resource Include="Resources\Images\Close.png" />
+    <Resource Include="Resources\Images\Copy.png" />
+    <Resource Include="Resources\Images\Cut.png" />
+    <Resource Include="Resources\Images\Delete.png" />
+    <Resource Include="Resources\Images\NoSplit.png" />
+    <Resource Include="Resources\Images\Paste.png" />
+    <Resource Include="Resources\Images\ReplaceAll.png" />
+    <Resource Include="Resources\Images\ReplaceNext.png" />
+    <Resource Include="Resources\Images\SplitHorizontal.png" />
+    <Resource Include="Resources\Images\SplitVertical.png" />
+    <Resource Include="Resources\Images\WholeWord.png" />
+    <Resource Include="Resources\Images\Wildcards.png" />
+    <Resource Include="Resources\PythonHighLight.xml" />
+    <Resource Include="Resources\SqlHighLight.xml" />
+  </ItemGroup>
+</Project>
