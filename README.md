@@ -6,3 +6,5 @@ Permite:
 * Pantalla dividida horizontal / vertical
 * Cuadro de búsqueda de texto
 * Cambio fácil entre los diferentes archivos de resalte
+
+[![Publish package](https://github.com/jbautistam/CodeEditor/actions/workflows/dotnet.yml/badge.svg)](https://github.com/jbautistam/CodeEditor/actions/workflows/dotnet.yml)
