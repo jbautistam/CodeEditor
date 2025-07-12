@@ -90,6 +90,12 @@
 						</MenuItem.Icon>
 					</MenuItem>
 					<Separator/>
+					<MenuItem Header="Buscar" Click="cmdOpenSearch_Click">
+						<MenuItem.Icon>
+							<Image Width="16" Height="16" Source="/CodeEditor;component/Resources/Images/Search.png" />
+						</MenuItem.Icon>
+					</MenuItem>
+					<Separator/>
 					<MenuItem x:Name="mnuUnsplit" Header="Quitar división pantalla" Click="mnuUnsplit_Click">
 						<MenuItem.Icon>
 							<Image Width="16" Height="16" Source="/CodeEditor;component/Resources/Images/NoSplit.png" />

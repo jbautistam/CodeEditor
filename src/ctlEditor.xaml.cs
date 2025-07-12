@@ -575,4 +575,9 @@ public partial class ctlEditor : UserControl
 	{
 		SearchNext(false);
 	}
+
+	private void cmdOpenSearch_Click(object sender, RoutedEventArgs e)
+	{
+		ShowSearch(true);
+    }
 }
