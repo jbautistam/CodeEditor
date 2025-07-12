@@ -26,6 +26,7 @@
     <None Remove="Resources\Images\Paste.png" />
     <None Remove="Resources\Images\ReplaceAll.png" />
     <None Remove="Resources\Images\ReplaceNext.png" />
+    <None Remove="Resources\Images\Search.png" />
     <None Remove="Resources\Images\SplitHorizontal.png" />
     <None Remove="Resources\Images\SplitVertical.png" />
     <None Remove="Resources\Images\WholeWord.png" />
@@ -53,6 +54,7 @@
     <Resource Include="Resources\Images\Paste.png" />
     <Resource Include="Resources\Images\ReplaceAll.png" />
     <Resource Include="Resources\Images\ReplaceNext.png" />
+    <Resource Include="Resources\Images\Search.png" />
     <Resource Include="Resources\Images\SplitHorizontal.png" />
     <Resource Include="Resources\Images\SplitVertical.png" />
     <Resource Include="Resources\Images\WholeWord.png" />

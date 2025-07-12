@@ -44,6 +44,12 @@
 						</MenuItem.Icon>
 					</MenuItem>
 					<Separator/>
+					<MenuItem Header="Buscar" Click="cmdOpenSearch_Click">
+						<MenuItem.Icon>
+							<Image Width="16" Height="16" Source="/CodeEditor;component/Resources/Images/Search.png" />
+						</MenuItem.Icon>
+					</MenuItem>
+					<Separator/>
 					<MenuItem x:Name="mnuSplitVertical" Header="Dividir pantalla verticalmente" Click="mnuSplitVertical_Click">
 						<MenuItem.Icon>
 							<Image Width="16" Height="16" Source="/CodeEditor;component/Resources/Images/SplitVertical.png" />
